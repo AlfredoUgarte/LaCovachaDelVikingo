@@ -1,0 +1,298 @@
+@import url(´https://fonts.google.com/share?selection.family=Josefin%20Sans:wght@300&display=swap´);
+@font-face {
+   font-family: "BADABB";
+   src: url(../assets/fonts/BADABB__.TTF);
+}
+@font-face {
+   font-family: "Delmon";
+   src: url(../assets/fonts/Delmon\ Delicate.ttf);
+}
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body{
+  background-color: rgb(165, 165, 165);
+}
+h1 {
+   font-family: "BADABB";
+   font-weight: bold;font-size: 3rem;
+   text-align:center;
+   text-decoration: underline;
+   color: black
+}
+h2 {
+   font-family: "BADABB";
+   font-weight: bold;
+   font-size: 2rem;
+   text-align: center;
+   color: aliceblue;
+   padding: 20px 20px;
+   background-image: url("../assets/images/backgrounds/dark-wood-wall.jpg");
+   background-size: 200px 100px;
+   background-repeat: repeat-x;
+}
+p {
+   font-family: "Delmon";
+   font-style: normal;
+   font-weight: bold;
+   font-size: 1rem;  
+}
+.indexBody{
+   background-image: url("../assets/images/backgrounds/favpng_spawn-angela-comics-artist-drawing-sketch.png");
+   background-position: right center;  
+   background-repeat: no-repeat; 
+}
+.main__body{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: repeat(3,1fr);
+   row-gap: 20px;
+   column-gap: 20px;  
+}
+.main__body iframe{
+   width: 80%;
+   aspect-ratio: 16 / 9;
+}
+.main__body img{
+   width: 100%;
+   height: 300;
+}
+.main__video1{
+   grid-column: 1;
+   grid-row: 1/3 ; 
+}
+.main__imagen1{
+  
+   grid-column: 2;
+   grid-row: 1/3;
+}
+.main__video2{
+   grid-column: 2;
+   grid-row: 2/3 ;
+}
+.main__imagen2{
+  
+   grid-column: 1;
+   grid-row: 2/3;
+}
+.main__video3{
+   grid-column: 1;
+   grid-row: 3/3 ; 
+}
+.main__imagen3{
+  
+   grid-column: 2;
+   grid-row: 3/3;
+}
+header{
+   display: flex;
+}
+header img{
+   width: 150px;
+   height: 150px;
+   background-image: url("../assets/images/backgrounds/dark-wood-wall.jpg");
+   background-size: 200px 150px;
+   background-repeat: repeat-x;
+}
+.navBar{
+   display: flex;
+   align-items: center;
+   justify-content: end;
+   width: 100%;
+   background-image: url("../assets/images/backgrounds/dark-wood-wall.jpg");
+   background-size: 200px 150px;
+   background-repeat: repeat-x;
+}
+.navBar ul{
+   display:flex; 
+}
+.navBar ul li{
+   list-style:  none;
+}
+.navBar ul li a {
+   font-family: "BADABB";
+   font-weight:normal;
+   font-size: 2rem;
+   color:rgb(255, 255, 255);
+   padding: 20px 20px;
+   text-decoration: none; 
+}
+.video{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content:center;
+}
+.video iframe {
+   padding-bottom: 10px;
+   width: 50%;
+   aspect-ratio: 16 / 9;  
+}
+.video p{
+   font-family: "Delmon";
+   font-style: normal;
+   font-weight: lighter;
+   font-size:large;
+   padding: 20px;
+}
+.banner {
+   display: flex;
+   background-color: black;
+   width: 100%;
+   text-align: center;
+   padding: 20px;
+}
+.banner img {
+   margin: 0 auto;
+   width: 50%;
+   height: 200px;
+   padding: 20px auto;
+
+}
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 20px;
+  padding: 20px;
+
+}
+.tarjeta{
+   display: grid;
+   justify-items: center;
+}
+.tarjeta img {
+   margin: 2px;
+   border : solid 2px black;
+   height: 300px;
+   width: 450px;
+}
+.tarjeta p {
+   font-family: "Delmon";
+   font-style: normal;
+   font-weight:lighter;
+   font-size:medium;
+   padding-bottom: 15px;
+}
+.box{
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   flex-direction: column;
+}
+.box form{
+   background-image: url("../assets/images/backgrounds/favpng_viking-norsemen-vector-graphics-old-norse-illustration.png");
+   background-position: right center;  
+   background-repeat: no-repeat;
+   display: flex;
+   flex-direction: column;
+   width: 50%;
+   padding: 20px;
+   border-style: groove;
+   border-color: black;
+   border-width: 5px;
+   margin: 20px;
+}
+.box legend{
+   font-family: "Delmon";
+   font-weight: bold;
+   padding-top: 20px;
+   padding-bottom: 20px;
+   font-size: 2rem;
+}
+.box textarea{
+   opacity: 0.85;
+}
+#footer{
+  display: flex;
+  flex-direction: column;
+   width: 100%;
+   height: auto;
+   padding: 20px;
+   text-align: center;
+   font-family: "Delmon";
+   font-weight: bold;
+   font-size: 2rem;
+   color: aliceblue;
+   background-image: url("../assets/images/backgrounds/dark-wood-wall.jpg");
+   background-size: cover;
+   background-repeat: repeat-x;
+}
+#footer span
+{
+   text-transform: uppercase;
+}
+#footer ul{
+   list-style: none;
+   display:flex;
+   justify-content: center;
+}
+#footer ul li a{
+   text-align: center;
+   font-family: "Delmon";
+   font-weight: bold;
+   font-size: 2rem;
+   color: aliceblue;
+}
+@media only screen and (max-width: 576px) {
+   header{
+      flex-direction: column;
+   }
+   header img{
+      width: 100px;
+      height: 100px;
+      background-image:none;
+   }
+   .navBar{
+      justify-content: center;
+   }
+   .navBar ul li a {
+      font-size: 1rem;
+   }
+   /** imagen de fondo**/
+   .indexBody{
+     background-image: none;
+   }
+   /**banner**/
+   .banner img {
+      height: 100px;
+   }
+   .video__texto {
+      font-size: 0.5rem;
+   }
+   /**galeria**/
+   .galeria{
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(9, 1fr);
+   }
+   /**formulario**/
+   .box{
+      flex-direction: row;
+   }
+   .box form{
+      background-image:none;
+   }
+   /**footer**/
+   #footer{
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      align-items: center;
+      height: 100px;
+   }
+   #footer span{
+      font-size: 1rem;
+   }
+   #footer img {
+      width: 50px;
+
+   }
+   .main__body{
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-rows: repeat(9,1fr);
+   }
+   
+}

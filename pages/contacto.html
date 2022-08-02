@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="shorcut icon" href="../assets/images/iconos/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+
+<body class="contactoBody">
+    <header>
+        <a href="../index.html">
+            <img src="../assets/images/iconos/logo.png" alt="logo" width="100px">
+        </a>
+        <nav class="navBar">
+            <ul>
+                <li><a href="../index.html">INICIO</a></li>
+                <li><a href="../pages/neca.html">NECA</a></li>
+                <li><a href="../pages/mcfarlane.html">McFARLANE</a></li>
+                <li><a href="../pages/kotobukiya.html">KOTOBUKIYA</a></li>
+                <li> <a href="#">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="box">
+        <h1>Ponte en contacto con nosotros</h1>
+        <form action="Procesar.php" name="contacto" method="post">
+
+            <legend>Queremos conocer tu opinion</legend>
+            <p>
+                <label>Nombre:
+                    <input type="text" name="nombre" placeholder="Pedro" required>
+                </label>
+            </p>
+            <p>
+                <label>Apellido:
+                    <input type="text" name="apellido" placeholder="Hernandez" required>
+            </p>
+            <p>
+                <label>Email:
+                    <input type="email" name="email" placeholder="123@yahoo.com" required>
+                </label>
+            </p>
+            <p>
+            <h3>Comentario</h3>
+            <textarea name="comentario" id="" cols="30" rows="10"></textarea>
+            </p>
+            <p>
+                <button type="submit">Enviar comentario</button>
+            </p>
+        </form>
+    </div>
+    <footer id="footer">
+        <span>sigue nuestras redes sociales</span>
+        <ul>
+            <li><a href="https://instagram.com/" target="_blank"><img src="../assets/images/iconos/instagram_icon.png"
+                        alt="INSTAGRAM" width="100PX"></a></li>
+            <li><a href="https://www.facebook.com/" target="_blank"><img src="../assets/images/iconos/facebook_icon.png"
+                        alt="FACEBOOK" width="100px"></a></li>
+            <li><a href="https://twitter.com" target="_blank"><img src="../assets/images/iconos/instagram_icon.png"
+                        alt="TWITTER" width="100px"></a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>
