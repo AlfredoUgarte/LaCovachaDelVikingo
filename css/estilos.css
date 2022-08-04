@@ -13,14 +13,14 @@
    box-sizing: border-box;
 }
 body{
-  background-color: rgb(165, 165, 165);
+  background-color: rgb(43, 43, 43);
 }
 h1 {
-   font-family: "BADABB";
+   font-family: "Delmon";
    font-weight: bold;font-size: 3rem;
    text-align:center;
    text-decoration: underline;
-   color: black
+   color: rgb(255, 255, 255)
 }
 h2 {
    font-family: "BADABB";
@@ -38,6 +38,7 @@ p {
    font-style: normal;
    font-weight: bold;
    font-size: 1rem;  
+   color: rgb(255, 255, 255)
 }
 .indexBody{
    background-image: url("../assets/images/backgrounds/favpng_spawn-angela-comics-artist-drawing-sketch.png");
@@ -86,39 +87,61 @@ p {
    grid-column: 2;
    grid-row: 3/3;
 }
-header{
-   display: flex;
+/*Animacion Video*/
+.main__video1{
+   animation-name: grow;
+   animation-duration: 1s;
+   animation-timing-function: ease-out;
+   animation-delay: 0s;
+   animation-iteration-count: 1;
 }
-header img{
-   width: 150px;
-   height: 150px;
+
+
+.main__video2{
+   animation-name: grow;
+   animation-duration: 1s;
+   animation-timing-function:ease-in-out;
+   animation-delay: 0s;
+   animation-iteration-count: 1;
+}
+
+.main__video3{
+   animation-name: grow;
+   animation-duration: 1s;
+   animation-timing-function:ease-in;
+   animation-delay: 0s;
+   animation-iteration-count: 1;
+}
+@keyframes grow {
+   0%{
+      transform: scale(0) ;
+   }
+   50%{
+      transform: scale(.5) ;
+   }
+   100%{
+      transform: scale(1);
+   }
+
+}
+.navbar{
    background-image: url("../assets/images/backgrounds/dark-wood-wall.jpg");
    background-size: 200px 150px;
    background-repeat: repeat-x;
+
 }
-.navBar{
-   display: flex;
-   align-items: center;
-   justify-content: end;
-   width: 100%;
-   background-image: url("../assets/images/backgrounds/dark-wood-wall.jpg");
-   background-size: 200px 150px;
-   background-repeat: repeat-x;
+.navbar-collapse{
+flex-grow: initial;
 }
-.navBar ul{
-   display:flex; 
-}
-.navBar ul li{
-   list-style:  none;
-}
-.navBar ul li a {
+.navbar-dark .navbar-nav .nav-link{
    font-family: "BADABB";
-   font-weight:normal;
+   font-weight:lighter;
    font-size: 2rem;
    color:rgb(255, 255, 255);
-   padding: 20px 20px;
    text-decoration: none; 
+   padding: 20px 20px;
 }
+
 .video{
    display: flex;
    flex-direction: column;
@@ -176,6 +199,7 @@ header img{
    font-size:medium;
    padding-bottom: 15px;
 }
+
 .box{
    display: flex;
    align-items: center;
@@ -186,21 +210,21 @@ header img{
    background-image: url("../assets/images/backgrounds/favpng_viking-norsemen-vector-graphics-old-norse-illustration.png");
    background-position: right center;  
    background-repeat: no-repeat;
-   display: flex;
-   flex-direction: column;
    width: 50%;
    padding: 20px;
    border-style: groove;
-   border-color: black;
+   border-color: rgb(255, 255, 255);
    border-width: 5px;
    margin: 20px;
 }
-.box legend{
+.box .form-label
+{
    font-family: "Delmon";
    font-weight: bold;
    padding-top: 20px;
    padding-bottom: 20px;
    font-size: 2rem;
+   color: rgb(255, 255, 255);
 }
 .box textarea{
    opacity: 0.85;
