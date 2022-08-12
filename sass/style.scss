@@ -1,6 +1,4 @@
-$colorTextos: rgb(255, 0, 0);
-
-@import url(´https://fonts.google.com/share?selection.family=Josefin%20Sans:wght@300&display=swap´);
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
 
 @font-face {
    font-family: "BADABB";
@@ -11,6 +9,8 @@ $colorTextos: rgb(255, 0, 0);
    font-family: "Delmon";
    src: url(../assets/fonts/Delmon\ Delicate.ttf);
 }
+
+$colorTextos: rgb(255, 255, 255);
 
 * {
    margin: 0;
@@ -28,7 +28,7 @@ h1 {
    font-size: 3rem;
    text-align: center;
    text-decoration: underline;
-   color: colorTextos;
+   color: $colorTextos;
    padding: 50px;
 
 }
@@ -38,7 +38,7 @@ h2 {
    font-weight: bold;
    font-size: 2rem;
    text-align: center;
-   color: colorTextos;
+   color: $colorTextos;
    padding: 20px 20px;
    background-color: rgb(43, 43, 43);
 }
@@ -48,22 +48,23 @@ p {
    font-style: normal;
    font-weight: bold;
    font-size: 1rem;
-   color: colorTextos;
+   color: $colorTextos;
 }
 
 .carousel-item {
-   height: 555x;
-   border-style:groove;
+   border-style: groove;
+   border-width: 20px;
    border-left: 0px;
    border-right: 0px;
    border-top-width: 5px;
    border-bottom-width: 5px;
-   border-color: colorTextos;
+   border-color: $colorTextos;
+
+   img {
+      height: 555px;
+   }
 }
 
-.carousel-item img {
-   height: 555px;
-}
 
 .main__body {
    display: grid;
@@ -73,15 +74,15 @@ p {
    column-gap: 20px;
    padding: 20px;
 
-}
+   iframe {
+      width: 100%;
+      height: 100%;
+   }
 
-.main__body iframe {
-   width: 100%;
-   height: 100%;
-}
+   img {
+      width: 100%;
 
-.main__body img {
-   width: 100%;
+   }
 
 }
 
@@ -167,13 +168,24 @@ p {
    flex-grow: initial;
 }
 
-.navbar-dark .navbar-nav .nav-link {
-   font-family: "BADABB";
-   font-weight: lighter;
-   font-size: 2rem;
-   color:colorTextos;
-   text-decoration: none;
-   padding: 20px 20px;
+.navbar-dark {
+   .navbar-nav {
+      .nav-link {
+         font-family: "BADABB";
+         font-weight: lighter;
+         font-size: 2rem;
+         color: $colorTextos;
+         text-decoration: none;
+         padding: 20px 20px;
+
+         &:hover {
+            color: rgb(109, 109, 109);
+            text-decoration: underline;
+            font-size: 2.5rem;
+         }
+      }
+
+   }
 }
 
 .video {
@@ -181,21 +193,23 @@ p {
    flex-direction: column;
    align-items: center;
    justify-content: center;
+
+   iframe {
+      padding-bottom: 10px;
+      width: 50%;
+      aspect-ratio: 16 / 9;
+   }
+
+   p {
+      font-family: "Delmon";
+      font-style: normal;
+      font-weight: lighter;
+      font-size: large;
+      padding: 20px;
+   }
+
 }
 
-.video iframe {
-   padding-bottom: 10px;
-   width: 50%;
-   aspect-ratio: 16 / 9;
-}
-
-.video p {
-   font-family: "Delmon";
-   font-style: normal;
-   font-weight: lighter;
-   font-size: large;
-   padding: 20px;
-}
 
 .banner {
    display: flex;
@@ -203,91 +217,90 @@ p {
    width: 100%;
    text-align: center;
    padding: 20px;
+
+   img {
+      margin: 0 auto;
+      width: 50%;
+      height: 200px;
+      padding: 20px;
+
+   }
 }
 
-.banner img {
-   margin: 0 auto;
-   width: 50%;
-   height: 200px;
-   padding: 20px auto;
-
-}
 
 .galeria {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    grid-template-rows: repeat(3, 1fr);
    row-gap: 50px;
-   column-gap:20px ;
+   column-gap: 20px;
    padding: 50px;
+
 
 }
 
 .tarjeta {
    display: grid;
    justify-items: center;
+
+   img {
+      margin: 2px;
+      border: solid 2px black;
+      height: 550px;
+      width: 100%;
+   }
+
+   p {
+      font-family: "Delmon";
+      font-style: normal;
+      font-weight: lighter;
+      font-size: medium;
+      padding-bottom: 15px;
+   }
 }
 
-.tarjeta img {
-   margin: 2px;
-   border: solid 2px black;
-   height: 550px;
-   width: 100%;
-}
 
-.tarjeta p {
-   font-family: "Delmon";
-   font-style: normal;
-   font-weight: lighter;
-   font-size: medium;
-   padding-bottom: 15px;
-}
 
 .box {
    display: flex;
    align-items: center;
    justify-content: space-around;
    flex-direction: column;
-}
 
-.box form {
-   background-image: url("../assets/images/backgrounds/favpng_viking-norsemen-vector-graphics-old-norse-illustration.png");
-   background-position: right center;
-   background-repeat: no-repeat;
-   width: 50%;
-   padding: 20px;
-   border-style: groove;
-   border-color: colorTextos;
-   border-width: 5px;
-   margin: 20px;
-}
+   form {
+      background-image: url("../assets/images/backgrounds/favpng_viking-norsemen-vector-graphics-old-norse-illustration.png");
+      background-position: right center;
+      background-repeat: no-repeat;
+      width: 50%;
+      padding: 20px;
+      border-style: groove;
+      border-color: $colorTextos;
+      border-width: 5px;
+      margin: 20px;
+   }
 
-.box .form-label {
-   font-family: "Delmon";
-   font-weight: bold;
-   padding-top: 20px;
-   padding-bottom: 20px;
-   font-size: 2rem;
-   color: colorTextos;
-}
+   .form-label {
+      font-family: "Delmon";
+      font-weight: bold;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      font-size: 2rem;
+      color: $colorTextos;
+   }
 
-.box textarea {
-   opacity: 0.85;
-}
+   textarea {
+      opacity: 0.85;
+   }
 
-.box .btn-primary {
-   background-color: black;
-   border-color: colorTextos;
-}
+   .btn-primary {
+      background-color: black;
+      border-color: $colorTextos;
 
-.btn-primary {
-   animation-name: colorChange;
-   transition-duration: 0.4s;
-}
+      &:hover {
+         background-color: rgb(102, 102, 102);
+      }
+   }
 
-.box .btn-primary:hover {
-
-   background-color: rgb(102, 102, 102);
 }
 
 #footer {
@@ -300,47 +313,55 @@ p {
    font-family: "Delmon";
    font-weight: bold;
    font-size: 2rem;
-   color: colorTexto;
+   color: $colorTextos;
    background-image: url("../assets/images/backgrounds/dark-wood-wall.jpg");
    background-size: cover;
    background-repeat: repeat-x;
+
+   span {
+      text-transform: uppercase;
+   }
+
+   ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+
+      a {
+         text-align: center;
+         font-family: "Delmon";
+         font-weight: bold;
+         font-size: 2rem;
+         color: $colorTextos;
+      }
+   }
 }
 
-#footer span {
-   text-transform: uppercase;
-}
-
-#footer ul {
-   list-style: none;
-   display: flex;
-   justify-content: center;
-}
-
-#footer ul li a {
-   text-align: center;
-   font-family: "Delmon";
-   font-weight: bold;
-   font-size: 2rem;
-   color:colorTexto;
-}
 
 @media only screen and (max-width: 576px) {
    header {
       flex-direction: column;
+
+      img {
+         width: 100px;
+         height: 100px;
+         background-image: none;
+      }
    }
 
-   header img {
-      width: 100px;
-      height: 100px;
-      background-image: none;
-   }
+
 
    .navBar {
       justify-content: center;
-   }
 
-   .navBar ul li a {
-      font-size: 1rem;
+      ul {
+         li {
+            a {
+               font-size: 1rem;
+
+            }
+         }
+      }
    }
 
    /** imagen de fondo**/
@@ -371,10 +392,10 @@ p {
    /**formulario**/
    .box {
       flex-direction: row;
-   }
 
-   .box form {
-      background-image: none;
+      form {
+         background-image: none;
+      }
    }
 
    /**footer**/
@@ -384,15 +405,15 @@ p {
       left: 0;
       align-items: center;
       height: 100px;
-   }
 
-   #footer span {
-      font-size: 1rem;
-   }
+      span {
+         font-size: 1rem;
+      }
 
-   #footer img {
-      width: 50px;
+      img {
+         width: 50px;
 
+      }
    }
 
    .main__body {
@@ -403,10 +424,10 @@ p {
 
    .carousel-item {
       height: 200px;
-   }
 
-   .carousel-item img {
-      height: 200px;
+      img {
+         height: 200px;
+      }
    }
 
 }

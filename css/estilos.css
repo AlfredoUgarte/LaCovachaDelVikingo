@@ -1,5 +1,4 @@
-@charset "UTF-8";
-@import url(´https://fonts.google.com/share?selection.family=Josefin%20Sans:wght@300&display=swap´);
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
 @font-face {
   font-family: "BADABB";
   src: url(../assets/fonts/BADABB__.TTF);
@@ -24,7 +23,7 @@ h1 {
   font-size: 3rem;
   text-align: center;
   text-decoration: underline;
-  color: colorTextos;
+  color: rgb(255, 255, 255);
   padding: 50px;
 }
 
@@ -33,7 +32,7 @@ h2 {
   font-weight: bold;
   font-size: 2rem;
   text-align: center;
-  color: colorTextos;
+  color: rgb(255, 255, 255);
   padding: 20px 20px;
   background-color: rgb(43, 43, 43);
 }
@@ -43,19 +42,18 @@ p {
   font-style: normal;
   font-weight: bold;
   font-size: 1rem;
-  color: colorTextos;
+  color: rgb(255, 255, 255);
 }
 
 .carousel-item {
-  height: 555x;
   border-style: groove;
+  border-width: 20px;
   border-left: 0px;
   border-right: 0px;
   border-top-width: 5px;
   border-bottom-width: 5px;
-  border-color: colorTextos;
+  border-color: rgb(255, 255, 255);
 }
-
 .carousel-item img {
   height: 555px;
 }
@@ -68,12 +66,10 @@ p {
   column-gap: 20px;
   padding: 20px;
 }
-
 .main__body iframe {
   width: 100%;
   height: 100%;
 }
-
 .main__body img {
   width: 100%;
 }
@@ -156,9 +152,14 @@ p {
   font-family: "BADABB";
   font-weight: lighter;
   font-size: 2rem;
-  color: colorTextos;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   padding: 20px 20px;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: rgb(109, 109, 109);
+  text-decoration: underline;
+  font-size: 2.5rem;
 }
 
 .video {
@@ -167,13 +168,11 @@ p {
   align-items: center;
   justify-content: center;
 }
-
 .video iframe {
   padding-bottom: 10px;
   width: 50%;
   aspect-ratio: 16/9;
 }
-
 .video p {
   font-family: "Delmon";
   font-style: normal;
@@ -189,12 +188,11 @@ p {
   text-align: center;
   padding: 20px;
 }
-
 .banner img {
   margin: 0 auto;
   width: 50%;
   height: 200px;
-  padding: 20px auto;
+  padding: 20px;
 }
 
 .galeria {
@@ -210,14 +208,12 @@ p {
   display: grid;
   justify-items: center;
 }
-
 .tarjeta img {
   margin: 2px;
   border: solid 2px black;
   height: 550px;
   width: 100%;
 }
-
 .tarjeta p {
   font-family: "Delmon";
   font-style: normal;
@@ -232,7 +228,6 @@ p {
   justify-content: space-around;
   flex-direction: column;
 }
-
 .box form {
   background-image: url("../assets/images/backgrounds/favpng_viking-norsemen-vector-graphics-old-norse-illustration.png");
   background-position: right center;
@@ -240,34 +235,25 @@ p {
   width: 50%;
   padding: 20px;
   border-style: groove;
-  border-color: colorTextos;
+  border-color: rgb(255, 255, 255);
   border-width: 5px;
   margin: 20px;
 }
-
 .box .form-label {
   font-family: "Delmon";
   font-weight: bold;
   padding-top: 20px;
   padding-bottom: 20px;
   font-size: 2rem;
-  color: colorTextos;
+  color: rgb(255, 255, 255);
 }
-
 .box textarea {
   opacity: 0.85;
 }
-
 .box .btn-primary {
   background-color: black;
-  border-color: colorTextos;
+  border-color: rgb(255, 255, 255);
 }
-
-.btn-primary {
-  animation-name: colorChange;
-  transition-duration: 0.4s;
-}
-
 .box .btn-primary:hover {
   background-color: rgb(102, 102, 102);
 }
@@ -282,28 +268,25 @@ p {
   font-family: "Delmon";
   font-weight: bold;
   font-size: 2rem;
-  color: colorTexto;
+  color: rgb(255, 255, 255);
   background-image: url("../assets/images/backgrounds/dark-wood-wall.jpg");
   background-size: cover;
   background-repeat: repeat-x;
 }
-
 #footer span {
   text-transform: uppercase;
 }
-
 #footer ul {
   list-style: none;
   display: flex;
   justify-content: center;
 }
-
-#footer ul li a {
+#footer ul a {
   text-align: center;
   font-family: "Delmon";
   font-weight: bold;
   font-size: 2rem;
-  color: colorTexto;
+  color: rgb(255, 255, 255);
 }
 
 @media only screen and (max-width: 576px) {
