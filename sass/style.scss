@@ -12,6 +12,21 @@
 
 $colorTextos: rgb(255, 255, 255);
 
+@mixin size ($ancho, $alto) {
+   width: $ancho;
+   height: $alto;
+
+}
+
+$estilos: (
+   fuenteA:"Delmon",
+   fuenteB:"BADABB",
+   bgColor:rgb(22, 22, 22),
+   bgColorH2:rgb(43, 43, 43),
+
+
+);
+
 * {
    margin: 0;
    padding: 0;
@@ -19,11 +34,11 @@ $colorTextos: rgb(255, 255, 255);
 }
 
 body {
-   background-color: rgb(22, 22, 22);
+   background-color: map-get($estilos, bgColor);
 }
 
 h1 {
-   font-family: "Delmon";
+   font-family: map-get($estilos, fuenteA);
    font-weight: bold;
    font-size: 3rem;
    text-align: center;
@@ -34,17 +49,17 @@ h1 {
 }
 
 h2 {
-   font-family: "BADABB";
+   font-family: map-get($estilos, fuenteB);
    font-weight: bold;
    font-size: 2rem;
    text-align: center;
    color: $colorTextos;
    padding: 20px 20px;
-   background-color: rgb(43, 43, 43);
+   background-color: map-get($estilos, bgColorH2);
 }
 
 p {
-   font-family: "Delmon";
+   font-family: map-get($estilos, fuenteA);
    font-style: normal;
    font-weight: bold;
    font-size: 1rem;
@@ -52,8 +67,7 @@ p {
 }
 
 .carousel-item {
-   border-style: groove;
-   border-width: 20px;
+   border-style: solid;
    border-left: 0px;
    border-right: 0px;
    border-top-width: 5px;
@@ -61,7 +75,8 @@ p {
    border-color: $colorTextos;
 
    img {
-      height: 555px;
+      @include size(100%, 650px);
+
    }
 }
 
@@ -75,12 +90,11 @@ p {
    padding: 20px;
 
    iframe {
-      width: 100%;
-      height: 100%;
+      @include size(100%, 100%);
    }
 
    img {
-      width: 100%;
+      @include size(100%, 100%);
 
    }
 
@@ -130,19 +144,11 @@ p {
 
 
 .main__video2 {
-   animation-name: grow;
-   animation-duration: 2s;
-   animation-timing-function: ease-in-out;
-   animation-delay: 0s;
-   animation-iteration-count: 1;
+   @extend .main__video1;
 }
 
 .main__video3 {
-   animation-name: grow;
-   animation-duration: 2s;
-   animation-timing-function: ease-in;
-   animation-delay: 0s;
-   animation-iteration-count: 1;
+   @extend .main__video1;
 }
 
 @keyframes grow {
@@ -161,7 +167,7 @@ p {
 }
 
 .navbar {
-   background-color: rgb(43, 43, 43);
+   background-color: map-get($estilos, bgColorH2);
 }
 
 .navbar-collapse {
@@ -171,7 +177,7 @@ p {
 .navbar-dark {
    .navbar-nav {
       .nav-link {
-         font-family: "BADABB";
+         font-family: map-get($estilos, fuenteB);
          font-weight: lighter;
          font-size: 2rem;
          color: $colorTextos;
@@ -196,12 +202,12 @@ p {
 
    iframe {
       padding-bottom: 10px;
-      width: 50%;
+      @include size(50%, 100%);
       aspect-ratio: 16 / 9;
    }
 
    p {
-      font-family: "Delmon";
+      font-family: map-get($estilos, fuenteA);
       font-style: normal;
       font-weight: lighter;
       font-size: large;
@@ -214,14 +220,13 @@ p {
 .banner {
    display: flex;
    background-color: black;
-   width: 100%;
+   @include size(100%, auto);
    text-align: center;
    padding: 20px;
 
    img {
       margin: 0 auto;
-      width: 50%;
-      height: 200px;
+      @include size(50%, 200px);
       padding: 20px;
 
    }
@@ -242,12 +247,12 @@ p {
 .tarjeta {
    display: grid;
    justify-items: center;
+   border: solid 2px rgb(155, 155, 155);
 
    img {
       margin: 2px;
       border: solid 2px black;
-      height: 550px;
-      width: 100%;
+      @include size(100%, 550px);
    }
 
    p {
@@ -256,6 +261,23 @@ p {
       font-weight: lighter;
       font-size: medium;
       padding-bottom: 15px;
+   }
+
+   .tarjeta__buttons {
+      padding: 20px;
+      @include size(70%, auto);
+      display: flex;
+      justify-content: space-around
+   }
+
+   .btn-primary {
+      background-color: rgb(68, 68, 68);
+      border-color: $colorTextos;
+
+
+      &:hover {
+         background-color: rgb(109, 109, 109);
+      }
    }
 }
 
@@ -271,7 +293,7 @@ p {
       background-image: url("../assets/images/backgrounds/favpng_viking-norsemen-vector-graphics-old-norse-illustration.png");
       background-position: right center;
       background-repeat: no-repeat;
-      width: 50%;
+      @include size(50%, auto);
       padding: 20px;
       border-style: groove;
       border-color: $colorTextos;
@@ -306,11 +328,10 @@ p {
 #footer {
    display: flex;
    flex-direction: column;
-   width: 100%;
-   height: auto;
+   @include size(100%, auto);
    padding: 20px;
    text-align: center;
-   font-family: "Delmon";
+   font-family: map-get($estilos, fuenteA);
    font-weight: bold;
    font-size: 2rem;
    color: $colorTextos;
@@ -329,7 +350,7 @@ p {
 
       a {
          text-align: center;
-         font-family: "Delmon";
+         font-family: map-get($estilos, fuenteA);
          font-weight: bold;
          font-size: 2rem;
          color: $colorTextos;
@@ -343,8 +364,7 @@ p {
       flex-direction: column;
 
       img {
-         width: 100px;
-         height: 100px;
+         @include size(100px, 100px);
          background-image: none;
       }
    }
@@ -400,9 +420,6 @@ p {
 
    /**footer**/
    #footer {
-      position: fixed;
-      bottom: 0;
-      left: 0;
       align-items: center;
       height: 100px;
 
@@ -423,10 +440,8 @@ p {
    }
 
    .carousel-item {
-      height: 200px;
-
       img {
-         height: 200px;
+         @include size(auto, 200px);
       }
    }
 
